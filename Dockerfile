@@ -2,7 +2,7 @@ FROM foundeo/minibox:latest AS build
 
 RUN box install fixinator
 
-RUN box install cfml-parser
+RUN box install cfml-compiler
 
 RUN box install commandbox-codechecker
 
