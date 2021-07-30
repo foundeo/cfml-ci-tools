@@ -79,6 +79,7 @@ jobs:
           
           echo "${{ secrets.DOCKER_PASS }}" | docker login --username ${{ secrets.DOCKER_USER }} --password-stdin 
           #publish to docker hub
+          IMAGE_ID=foundeo/$IMAGE_NAME
           docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
           
