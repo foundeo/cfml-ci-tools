@@ -16,6 +16,17 @@ RUN box install commandbox-cfconfig
 
 RUN box install commandbox-docbox
 
+#output some version info so we have it in the build logs
+
+RUN echo "VERSION INFORMATION"
+
+RUN box version
+
+RUN box package list --system
+
+RUN java -version
+
+
 FROM foundeo/minibox:latest
 
 COPY --from=build /root/.CommandBox/cfml/modules /root/.CommandBox/cfml/modules 
