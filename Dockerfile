@@ -26,6 +26,12 @@ RUN box package list --system
 
 RUN java -version
 
+#run cfformat so it can download cftokens binary
+
+RUN echo "component {}" > /tmp/test.cfc
+
+RUN box cfformat run /tmp/test.cfc
+
 
 FROM foundeo/minibox:latest
 
