@@ -60,7 +60,7 @@ jobs:
           echo $VERSION
           
           #overwrite version.txt so it gets baked into the container image
-          echo $VERSION >> ./version.txt
+          echo $VERSION > ./version.txt
 
       - name: Build image
         run: docker build . --file Dockerfile --tag $IMAGE_NAME
