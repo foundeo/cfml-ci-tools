@@ -37,6 +37,8 @@ FROM foundeo/minibox:latest
 
 COPY --from=build /root/.CommandBox/cfml/modules /root/.CommandBox/cfml/modules 
 
+COPY ./version.txt /etc/cfml-ci-tools-version
+
 RUN mkdir -p /app
 
 RUN cd /app
