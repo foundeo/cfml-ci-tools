@@ -17,7 +17,7 @@ RUN box install commandbox-cfconfig
 RUN box install commandbox-docbox
 
 # ESAPI extension for testbox run
-ADD https://ext.lucee.org/esapi-extension-2.2.0.1.lex /root/.CommandBox/engine/cfml/cli/lucee-server/deploy/esapi-extension-2.2.0.1.lex
+ENV LUCEE_EXTENSIONS="$LUCEE_EXTENSIONS,37C61C0A-5D7E-4256-8572639BE0CF5838"
 
 #output some version info so we have it in the build logs
 
