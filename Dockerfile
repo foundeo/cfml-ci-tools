@@ -37,6 +37,9 @@ RUN box cfformat run /tmp/test.cfc
 
 FROM foundeo/minibox:latest
 
+# ESAPI extension for testbox run
+ENV LUCEE_EXTENSIONS="$LUCEE_EXTENSIONS,37C61C0A-5D7E-4256-8572639BE0CF5838"
+
 COPY --from=build /root/.CommandBox/cfml/modules /root/.CommandBox/cfml/modules 
 
 COPY ./version.txt /etc/cfml-ci-tools-version
