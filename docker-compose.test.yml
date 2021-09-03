@@ -1,6 +1,6 @@
 sut:
   build: .
   command: >
-    bash -c "box version
+    sh -c "box version
     && echo 'MiniBox Version'
     && cat /etc/minibox-version"
