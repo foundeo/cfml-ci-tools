@@ -16,6 +16,8 @@ RUN box install commandbox-cfconfig
 
 RUN box install commandbox-docbox
 
+RUN box install commandbox-semantic-release
+
 #output some version info so we have it in the build logs
 
 RUN echo "VERSION INFORMATION"
