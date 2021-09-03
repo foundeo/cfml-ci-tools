@@ -12,6 +12,7 @@ A docker container with several CI tools for CFML installed:
 * commandbox-dotenv
 * commandbox-cfconfig
 * commandbox-docbox
+* commandbox-semantic-release
 
 ## Usage
 
