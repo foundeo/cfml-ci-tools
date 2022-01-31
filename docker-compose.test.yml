@@ -10,4 +10,5 @@ sut:
     && cd /tmp/cfml-ci-examples/
     && git clone https://github.com/foundeo/cfml-ci-examples.git .
     && box cflint reportLevel=ERROR
-    && box codechecker run"
+    && box codechecker run
+    && testbox run runner=http://localhost/index.cfm"
