@@ -1,13 +1,15 @@
-sut:
-  build: .
-  command: >
-    sh -c "box version
-    && echo 'MiniBox Version'
-    && cat /etc/minibox-version
-    && apk update
-    && apk add git
-    && mkdir /tmp/cfml-ci-examples/
-    && cd /tmp/cfml-ci-examples/
-    && git clone https://github.com/foundeo/cfml-ci-examples.git .
-    && box cflint reportLevel=ERROR
-    && box codechecker run"
+version: '3.7'
+services:
+  sut:
+    build: .
+    command: >
+      sh -c "box version
+      && echo 'MiniBox Version'
+      && cat /etc/minibox-version
+      && apk update
+      && apk add git
+      && mkdir /tmp/cfml-ci-examples/
+      && cd /tmp/cfml-ci-examples/
+      && git clone https://github.com/foundeo/cfml-ci-examples.git .
+      && box cflint reportLevel=ERROR
+      && box codechecker run"
