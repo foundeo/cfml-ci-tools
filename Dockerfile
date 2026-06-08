@@ -42,6 +42,9 @@ ENV LUCEE_EXTENSIONS="$LUCEE_EXTENSIONS,37C61C0A-5D7E-4256-8572639BE0CF5838;name
 
 COPY --from=build /root/.CommandBox/cfml/modules /root/.CommandBox/cfml/modules 
 
+#install git so it can be used for checkout 
+RUN apk add --no-cache git
+
 COPY ./version.txt /etc/cfml-ci-tools-version
 
 RUN mkdir -p /app
